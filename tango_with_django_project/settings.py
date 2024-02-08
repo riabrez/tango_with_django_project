@@ -137,3 +137,6 @@ PASSWORD_HASHERS = (
 
 # Login variables
 LOGIN_URL = 'rango:login'
+
+# Enable browser_length session
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
