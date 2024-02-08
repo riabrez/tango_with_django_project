@@ -94,6 +94,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {'min_length': 6, }
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
@@ -127,3 +128,12 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 # Media variables
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+
+# Hash of User Passwords
+PASSWORD_HASHERS = (
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+)
+
+# Login variables
+LOGIN_URL = 'rango:login'
